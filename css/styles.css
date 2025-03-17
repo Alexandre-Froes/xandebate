@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+@font-face {
+    font-family: 'Andy-Bold';
+    src:url('../fonts/andy-bold/Andy-Bold.ttf.woff') format('woff'),
+        url('../fonts/andy-bold/Andy-Bold.ttf.svg#Andy-Bold') format('svg'),
+        url('../fonts/andy-bold/Andy-Bold.ttf.eot'),
+        url('../fonts/andy-bold/Andy-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --font-site: 'Poppins', 'Arial';
+    --font-jogos: 'Andy-Bold', 'Arial';
+    --font-titulo: 'Yusei Magic', 'Arial';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+body {
+    text-align: center;
+    font-family: var(--font-site);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.tituloDiverso,
+h1 {
+    margin-top: 80px;
+    font-family: var(--font-titulo);
+    color: rgb(44, 44, 44);
+    font-size: 4rem;
+    animation-name: float;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+p {
+    font-size: 1.5rem;
+    margin-bottom: 80px;
+}
+
+.menuJogos {
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    border: 2px solid red;
+    margin: auto;
+}
+
+.menuJogos h2 {
+    font-family: var(--font-jogos);
+    margin: 10px;
+}
+
+.menuJogos > a {
+    background-color: red;
+    max-width: 420px;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    border-radius: 25px;
+    display: block;
+    aspect-ratio: 323/139;
+    cursor: pointer;
+}
+.menuJogos > a > img {
+    border-radius:20px;
+    filter: hue-rotate(-10deg);
+    max-width: 100%;
+}
